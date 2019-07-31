@@ -1,5 +1,7 @@
 # type-app
 
+Simple typing game/application
+
 ## Project setup
 ```
 yarn install
@@ -25,5 +27,5 @@ yarn run test
 yarn run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### TODO
+- Add feedback when you miss a word

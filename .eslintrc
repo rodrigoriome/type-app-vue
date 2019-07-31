@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "prettier/vue",
+    "plugin:prettier/recommended",
+    "plugin:vue/essential"
+  ],
+  "rules": {
+    "vue/html-self-closing": "off"
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "plugins": ["prettier"]
+}
