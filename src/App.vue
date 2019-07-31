@@ -5,7 +5,7 @@
         TypeApp
       </h1>
       <p class="text-center mb-4">
-        Start typing to play
+        Start typing to play. Press "space" or "enter" to submit.
       </p>
       <div class="flex mb-12 justify-center">
         <button
@@ -24,8 +24,7 @@
           v-model="form"
           class="w-full rounded-lg shadow-lg p-4 mb-12 text-lg outline-none"
           :disabled="!gameReady"
-          @input="handleInput()"
-          @keydown.space.prevent="submit()"
+          @keydown="handleInput($event)"
         />
         <div class="absolute top-0 right-0 pt-5 pr-5">
           {{ timer }}
@@ -89,9 +88,14 @@ export default {
     }
   },
   methods: {
-    handleInput() {
+    handleInput(event) {
       if (!this.gameStarted) {
         this.startGame();
+      }
+
+      if (event.code.match(/(Space|Enter)/g)) {
+        event.preventDefault();
+        this.submit();
       }
     },
 
@@ -130,7 +134,9 @@ export default {
     },
 
     submit() {
-      this.handleInput();
+      if (!this.gameStarted) {
+        this.startGame();
+      }
       if (!this.gameOver) {
         if (this.settings.caseSensitive) {
           this.handleSubmit(this.form == this.words[this.index]);
