@@ -2,6 +2,8 @@
 
 Simple typing game/application
 
+[View the demo](https://rodrigoriome.github.io/type-app/)
+
 ## Project setup
 ```
 yarn install
