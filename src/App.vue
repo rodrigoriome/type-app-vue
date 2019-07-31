@@ -146,10 +146,12 @@ export default {
     },
 
     getNewWords() {
+      const list = [];
       for (let i = 0; i < 120; i++) {
         const random = Math.floor(Math.random() * WordsData.length - 1);
-        this.words.push(WordsData[random]);
+        list.push(WordsData[random]);
       }
+      this.words = list;
       this.gameReady = true;
     }
   },
