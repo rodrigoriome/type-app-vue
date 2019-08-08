@@ -1,6 +1,6 @@
 <template>
   <div class="font-sans text-gray-800 px-4">
-    <div class="container max-w-lg mx-auto pt-10">
+    <div class="max-w-lg mx-auto pt-10">
       <h1 class="text-5xl font-black mb-4 text-center">
         TypeApp
       </h1>

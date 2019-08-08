@@ -2,7 +2,7 @@
 
 Simple typing game/application
 
-[View the demo](https://rodrigoriome.github.io/type-app/)
+[View the demo](https://rodrigoriome.github.io/projects/type-app-vue/)
 
 ## Project setup
 ```
